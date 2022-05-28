@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>E-commerce Alura Geek - Agregar producto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top">
+    <div id="logotop" class="imglogo">
+      <a href="index.html"><img src="./img/alurageek.png"></a>
+    </div>
+    <div id="busqueda"> 
+      <form action="index.html" method="get" class="form-buscar">
+        <input type="text" placeholder="¿Qué deseas buscar?" name="nombre" class="campo-buscar" />
+      <button type="submit" class="boton-buscar"> 
+        <img src="./iconos/lupa.png">
+      </button>
+     </form>
+    </div>
+    <div id="login">
+      <button type="button" id="boton-login" class="boton-blanco"><a href="login.html">Login</a></button>
+    </div>
+</div> 
+<div id="areaagregar">
+  <div id="areaagregarimagen" class="flexhorizontal"><div id="imgsubida"></div><p id="letrao">O</p><button type="button" class="boton-blanco" id="botonsubir">Busque en su equipo</button></div>
+  <div>
+    <select name="categoriaagregado" id="selectcategoria">
+      <option value="" disabled selected>Seleccione una categoría</option>
+      <option value="starwars">Star Wars</option>
+      <option value="consolas">Consolas</option>
+      <option value="diversos">Diversos</option>
+   </select>
+  </div>
+  <div><input id="nombreagregado" placeholder="Nombre del producto"></div>
+  <div><input id="precioagregado" type="number" placeholder="Precio del producto"></div>
+  <div><textarea id="descripcionagregado" placeholder="Descripción del producto"></textarea></div>
+  <div><button type="button" id="botonagregar">Agregar producto</button></div>
+  <div id="erroragregar"></div>
+</div>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="controllers/agregarproducto-controller.js"></script>
+</body>
+<footer class="rodapie">
+  <div id="arealogo" class="imglogo"><img src="./img/alurageek.png"></div>
+  <div id="areavinculos">
+    <div><a href="#" class="vinculofooter">Quiénes somos</a></div>
+    <div><a href="#" class="vinculofooter">Política de privacidad</a></div>
+    <div><a href="#" class="vinculofooter">Programa de fidelidad</a></div>
+    <div><a href="#" class="vinculofooter">Nuestras tiendas</a></div>
+    <div><a href="#" class="vinculofooter">Quiero ser franquiciado</a></div>
+    <div><a href="#" class="vinculofooter">Anuncie aquí</a></div>
+  </div>
+  <div id="areacontacto">
+    <form action="#" id="formcontacto">
+      <p>Hable con nosotros</p>
+      <input id="inputnombre" placeholder="Nombre"></input>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+      <button type="button" id="boton-mensaje" onclick="enviarMensaje();">Enviar mensaje</button>
+      <p id="errormensaje"></p>
+    </form>
+  </div>
+  <div id="realizado">
+    <p>©2022 - Realizado por José Manuel Benetti</p>
+  </div>
+</footer>
+</html>

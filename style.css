@@ -1,0 +1,844 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size:  16px;
+  background-color: white;
+}
+
+body {
+  background-color: white;
+  font-family: Raleway, Verdana, Geneva, sans-serif;
+  margin: .5em;
+}
+
+/*Saco el estilo de todos los links*/
+
+ a, a:hover, a:focus, a:active {
+     text-decoration: none;
+     color: inherit;
+ }
+
+ /* --- */
+
+ /* Cambio el estilo de todos los inputs */
+
+  input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    border-width: 1px;
+    border-color: lightgray;
+  }
+
+ /* --- */
+
+ /*Clase general para flex con orientación horizontal*/
+.flexhorizontal {
+  display: flex;
+  flex-direction: row;
+}
+/*---*/
+
+#top{
+  display: grid;
+  grid-template-areas: 
+    'logotop busqueda login';
+  justify-content: center;
+  height: 70px;
+}
+
+#logotop {
+  grid-area: logotop;
+  /*width: 580px;*/
+}
+
+#busqueda {
+  grid-area: busqueda;
+}
+
+#login {
+  grid-area: login;
+}
+
+.imglogo{
+  line-height: 75px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+.campo-buscar
+{
+   padding: 10px 35px 10px 15px;
+   border: none;
+   height:  50px;
+   width: 350px;
+   margin-left: 30px;
+   border-radius: 100px;
+}
+
+.boton-buscar
+{
+  background: transparent;
+  outline: none;
+  border: none;
+  margin-left: -43px;
+  align-self: flex-start;
+  margin-top:  16px;
+}
+
+.boton-buscar img{
+  /*width: 20px;
+  height: 20px;*/
+  object-fit: cover;
+  /*align-self: center;*/
+}
+
+.boton-blanco {
+  color: #29a3f0;
+  background-color: white;
+  border-color: #29a3f0;
+  border-width: 1px;
+  width: 180px;
+  height: 50px;
+}
+
+#boton-login {
+ margin-left: 400px;
+  /*margin-top: 10px;*/
+}
+
+#banner {
+  /*display:  none;*/
+  /*position: relative;*/
+  /*top: 70px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px 0px 32px 110px;
+  width:  100%;
+  height: 352px;
+  font-weight: bold;
+  /*height: 300px;*/
+  background-image: url("./img/banner-image.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+#titulobanner {
+  /*margin-left: 152px;*/
+  color: white;
+  font-size: 52px;
+  line-height: 70px;
+}
+
+#subtitulobanner {
+  color: white;
+  font-size: 22px;
+  line-height: 32px;
+  /*margin-left: 152px;*/
+}
+
+#botonconsolas {
+  background-color: #2A7AE4;
+  border: none;
+  color: white;
+  height: 51px;
+  margin-top: 5px;
+  padding: 0px 15px 0px 15px;
+
+  vertical-align: middle;
+}
+
+#productos {
+  margin-bottom: 60px;
+}
+
+.categoria {
+  margin-top: 30px;
+}
+
+.areatitulocategoria {
+  display: grid;
+  grid-template-columns: 1fr 203px;
+}
+
+.vertodo {
+  margin-top: 10px;
+}
+
+.vertodo p{
+    float: left;
+    margin-right: 8px;
+}
+
+.vertodo img {
+  float: left;
+  margin-top: 2px;
+}
+
+.vertodo a:link, .vertodo a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+
+.titulocategoria {
+  margin-left: 110px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #464646;
+}
+
+.listaproductos {
+    justify-content: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.itemproducto {
+  margin-right: 10px;
+}
+
+.itemproducto img {
+  width: 176px;
+  height: 174px;
+}
+
+.tituloproducto {
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.linkproducto {
+  font-size:  16px;
+  font-weight: bold;
+  color: #2A7AE4;
+}
+
+.linkproducto a{
+  text-decoration: none;
+  color: #2A7AE4;
+}
+
+.precioproducto {
+  line-height: 35px;
+  font-size:  16px;
+  font-weight: bold;
+}
+
+/* raleway-regular - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: regular;
+  src: url('fonts/raleway-v26-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/raleway-v26-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/raleway-v26-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/raleway-v26-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/raleway-v26-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/raleway-v26-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
+.rodapie{
+  display: grid;
+  grid-template-areas: 
+    'logo vinculos contacto'
+    'realizado realizado realizado';
+  background-color: #EAF2FD;
+}
+
+#arealogo{
+  grid-area: logo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#areavinculos{
+  grid-area: vinculos;
+}
+
+.vinculofooter{
+  line-height: 45px;
+  text-decoration: none;
+  size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+#areacontacto{
+  grid-area: contacto;
+}
+
+#formcontacto{
+  margin-right: 115px;
+  display: flex;
+  flex-direction: column;
+}
+
+#formcontacto p{
+  line-height: 50px;
+  font-weight: bold;
+}
+
+#formcontacto input{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#formcontacto textarea{
+  font-size: 16px;
+  height: 5em;
+  margin-bottom: 20px;
+}
+
+#boton-mensaje {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 40%;
+}
+
+#realizado {
+    display: flex;
+    height: 100px;
+    grid-area: realizado;
+    background-color: white;
+    color: #464646;
+    align-items:center;
+    justify-content: center;
+  }
+
+/*CSS específico de producto.html*/
+
+#productoelegido {
+  margin-left: 110px;
+  margin-right: 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+#imagenelegido img {
+  /*width: 560px;*/
+}
+
+#tituloelegido {
+  margin-left: 10px;
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 61px;
+  color: #464646;
+}
+
+#precioelegido {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #464646;
+}
+
+#descripcionelegido {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #464646;
+}
+
+#diveliminarproducto {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: red;
+}
+
+#diveditarproducto {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: green;
+}
+
+
+#bloquesimilares {
+  margin-bottom:  50px;
+}
+
+/*--- fin CSS producto.html*/
+
+/*CSS específico de login.html*/
+
+#arealogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E5E5;
+}
+
+#titulologin {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 60px;
+  color: #464646;
+}
+
+#maillogin {
+  width: 423px;
+  height: 63.13px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #464646;
+  border-style: none;
+  margin-bottom: 10px;
+}
+
+#pwdlogin {
+  width: 423px;
+  height: 63.13px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #464646;
+  border-radius: 4px;
+}
+
+#botonentrar {
+  background-color: #2A7AE4;
+  border: none;
+  color: white;
+  height: 51px;
+  margin-top: 10px;
+  padding: 0px 15px 0px 15px;
+  width: 423px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+/*Fin de CSS de login*/
+
+/*CSS específico de agregarproducto.html*/
+
+#areaagregar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E5E5E5;
+}
+
+#areaagregarimagen {
+  /*margin: 10px 10px 10px 10px;*/
+}
+
+#imgsubida {
+  width:  200px;
+  height:  100px;
+  background-size: cover;
+  background-image: url("./img/arrastre.png");
+  margin: 10px 0 10px 0;
+}
+
+#areaagregarimagen p {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px 10px 10px;*/
+  padding: 0 10px 0 10px;
+  margin:  auto;
+}
+
+#areaagregarimagen button {
+  margin: auto;
+  height: 50px;
+}
+
+#selectcategoria {
+  width:423px;
+  height: 63.13px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #464646;
+  border-style: none;
+  margin-bottom: 10px;
+}
+
+#nombreagregado {
+  width: 423px;
+  height: 63.13px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #464646;
+  border-style: none;
+  margin-bottom: 10px;
+}
+
+#precioagregado {
+  width: 423px;
+  height: 63.13px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #464646;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#descripcionagregado {
+  width: 423px;
+  height: 80px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #464646;
+  border-radius: 4px;
+}
+
+#botonagregar {
+  background-color: #2A7AE4;
+  border: none;
+  color: white;
+  height: 51px;
+  margin-top: 10px;
+  padding: 0px 15px 0px 15px;
+  width: 423px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+/*Fin de CSS de agregarproducto*/
+
+/*Ajustes responsive*/
+
+
+  @media (max-width: 1365px) {
+    
+     .campo-buscar
+      {
+        padding: 10px 35px 10px 15px;
+        width: 272px;
+      }
+
+
+      .boton-blanco {
+        width: 180px;
+      }
+
+      #boton-login {
+         margin-left: 100px;
+      }
+
+    #banner {
+          padding: 0px 0px 32px 30px;
+          /*background-size: 120% auto;*/
+          background-image: url("./img/banner-imagenew.png");
+        }
+
+    .areatitulocategoria {
+         display: grid;
+         grid-template-columns: 1fr 100px;
+      }
+
+    .titulocategoria {
+      margin-left: 5px;
+    }
+
+    #boton-mensaje {
+      font-size: 14px;
+      width: 70%;
+    }
+
+    #formcontacto{
+      margin-right: 15px;
+  }
+
+  /*Responsive Login*/
+
+  #maillogin {
+      width: 275px;
+    }
+
+    #pwdlogin {
+      width: 275px;
+    }
+
+    #botonentrar {
+      width:  109px;
+    }
+
+    /*---*/
+
+    /*Responsive de agregar producto*/
+
+
+    #areaagregarimagen {
+      padding-right: 290px;
+    }
+
+    #nombreagregado, #precioagregado, #descripcionagregado {
+      width: 704px;
+    }
+
+    /**/
+
+    /*Responsive de producto.html*/
+
+    .listaproductos {
+      grid-template-columns: 16.67% 16.67% 16.67% 16.67%;
+      /*grid-gap: 10px;*/
+    }
+
+    .itemproducto {
+      margin-left: 5px;
+    }
+    .itemproducto img {
+      width: 95%;
+    }
+    /* .itemproducto:nth-child(3), .itemproducto:nth-child(4){
+      display: none;
+    } */
+
+    #productoelegido {
+      margin-left: 32px;
+      margin-right: 32px;
+    }
+/*
+    #imagenelegido {
+      width: 100%;
+    }*/
+
+ /*   #detalleselegido {
+      height: ;
+    }*/
+
+    #imagenelegido img{
+      width: 254px;
+      heigth: 157px;
+    }
+
+    #tituloelegido {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    #descripcionelegido {
+      font-size: 14px;
+    }
+    /**/
+
+
+}
+
+@media (max-width: 767px) {
+
+      .imglogo img{
+        width: 100px;
+      }
+
+      #top{
+        display: grid;
+        grid-template-areas: 
+          'logotop login busqueda';
+       }
+
+       #busqueda {
+        width: 30px;
+       }
+
+      .campo-buscar
+      {
+        display: none;
+      }
+
+      .boton-buscar {
+        margin-left: 25px;
+      }
+
+      .boton-blanco {
+        width: 133px;
+      }
+
+      #boton-login {
+         margin-left: 30px;
+      }
+
+    #banner {
+          padding: 0px 0px 32px 15px;
+          height: 192px;
+          /*background-image: url("./img/banner-imagenew.png");*/
+        }
+
+      #titulobanner {
+        font-size: 22px;
+        line-height: 32px;  
+      }
+
+      #subtitulobanner {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        margin-bottom: 15px;
+      }
+
+      #botonconsolas {
+        margin-top: 0px;
+        margin-bottom: 5px;
+        height: 40px;
+      }
+
+      /*#botonconsolas a{
+        text-decoration: none;
+        color: white;
+      }*/
+
+    /* Siguiente condición ya está en la pantalla más grande */
+    /*.itemproducto:nth-child(5), .itemproducto:nth-child(6){
+      display: none;
+    }*/ 
+
+    .areatitulocategoria {
+         /*display: grid;*/
+         grid-template-columns: 1fr 90px;
+         font-size: 14px;
+    }
+
+    .vertodo img{
+      height: 10.67px;
+      margin-top: 3px;
+    }
+
+    .titulocategoria {
+      margin-left: 5px;
+    }
+
+    #boton-mensaje {
+      font-size: 14px;
+      width: 133px;
+      padding: 10px 0px;
+    }
+
+    .rodapie{
+      grid-template-areas: 
+        'logo'
+        'vinculos'
+        'contacto'
+        'realizado';
+    }
+
+    #arealogo img {
+      width: 176px;
+    }
+
+    #areavinculos{
+      text-align: center;
+    }
+
+    .vinculofooter {
+      font-weight: 500;
+    }
+
+    /*Responsive de agregar producto*/
+
+
+    #areaagregarimagen {
+      padding-right: 0px;
+    }
+
+    #letrao, #imgsubida {
+      display: none;
+    }
+
+    #imgsubida {
+      display: block;
+      width: 328px;
+      height: 134px;
+      background-image: url("./img/agregarfoto.png");
+    }
+
+    #letrao, #areaagregarimagen button {
+      display: none;
+    }
+
+    /*#areaagregarimagen button {
+      width: 328px;
+      height: 134px;
+      background-image: url("./img/agregarfoto.png");
+      background-size: cover;
+      font-size: 0;
+      margin-bottom: 16px;
+    }*/
+
+    #nombreagregado, #precioagregado, #descripcionagregado {
+      width: 328px;
+    }
+
+    /**/
+
+    /*Responsive de producto.html*/
+
+    .listaproductos {
+      grid-template-columns: 50% 50%;
+      /*grid-gap: 10px;*/
+    }
+    .itemproducto {
+      margin-left: 5px;
+    }
+    .itemproducto img {
+      width: 95%;
+    }
+    .itemproducto:nth-child(3), .itemproducto:nth-child(4){
+      /*display: none;*/
+    }
+
+    #productoelegido {
+      flex-direction: column;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    #imagenelegido {
+      width: 100%;
+    }
+
+    #imagenelegido img{
+      width: 100%;
+    }
+
+    #descripcionelegido {
+      font-size: 14px;
+    }
+
+    /**/
+
+
+    
+
+}
+  

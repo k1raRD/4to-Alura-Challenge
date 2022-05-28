@@ -1,0 +1,23 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "Challenge front-end ecommerce",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmbenetti/challengefrontend-ecommerce.git"
+  },
+  "keywords": [
+    "Alura"
+  ],
+  "author": "José Manuel Benetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmbenetti/challengefrontend-ecommerce/issues"
+  },
+  "homepage": "https://jmbenetti.github.io/challengefrontend-ecommerce/"
+}
+

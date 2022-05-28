@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>E-commerce Alura Geek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top">
+    <div id="logotop" class="imglogo">
+      <a href="index.html"><img src="./img/alurageek.png"></a>
+    </div>
+    <div id="busqueda"> 
+      <form action="index.html" method="get" class="form-buscar">
+      <input type="text" placeholder="¿Qué deseas buscar?" name="nombre" class="campo-buscar" />
+      <button type="submit" class="boton-buscar"> 
+        <img src="./iconos/lupa.png">
+      </button>
+     </form>
+    </div>
+    <div id="login">
+      <button type="button" id="boton-login" class="boton-blanco"><a href="login.html">Login</a></button>
+    </div>
+</div> 
+<div id="banner">
+    <p id="titulobanner">Febrero promocional</p>
+    <p id="subtitulobanner">Productos selecionados con 33% de descuento</p>
+    <button type="button" id="botonconsolas"><a href="#consolas">Ver consolas</a></button>
+</div>
+<!-- Sección de producto elegido-->
+<div id="productoelegido">
+  <div id="imagenelegido"><img></img></div>
+  <div id="detalleselegido">
+    <div id="tituloelegido"></div>
+    <div id="precioelegido"></div>
+    <div id="descripcionelegido"></div>
+    <div id="diveditarproducto"><a id="linkeditar" href="#">Editar</a></div>
+    <div id="diveliminarproducto"><a id="linkeliminar" href="#">Eliminar</a></div>
+  </div>
+</div>
+<!-- fin sección de producto -->
+
+<!-- Sección de productos con JSON -->
+
+<section id="productos">
+  <div class="categoria">
+    <div class="areatitulocategoria">
+      <div class="titulocategoria titulotodo">Todos los productos</div>
+      <!-- <div class="vertodo"><a href="#"><p>Ver todo</p><img src="iconos/flecha.png" /></a></div> -->
+    </div>
+    <div class="listaproductos listatodo">
+    </div>
+  </div>
+  <div class="categoria">
+      <div class="areatitulocategoria">
+        <div class="titulocategoria">Star Wars</div>
+        <div class="vertodo"><a href="?vertodo=true"><p>Ver todo</p><img src="iconos/flecha.png" /></a></div>
+      </div>
+      <div class="listaproductos listastarwars">
+      </div>
+  </div>
+  <div class="categoria">
+    <div class="areatitulocategoria">
+      <div class="titulocategoria">Consolas</div>
+      <div class="vertodo"><a href="?vertodo=true"><p>Ver todo</p><img src="iconos/flecha.png" /></a></div>
+    </div>
+    <div class="listaproductos listaconsolas">
+    </div>
+  </div>
+  <div class="categoria">
+    <div class="areatitulocategoria">
+      <div class="titulocategoria">Diversos</div>
+      <div class="vertodo"><a href="?vertodo=true"><p>Ver todo</p><img src="iconos/flecha.png" /></a></div>
+    </div>
+    <div class="listaproductos listadiversos">
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/alasql@0.4"></script>
+<script type="module" src="controllers/producto-controller.js"></script>
+</body>
+<footer class="rodapie">
+  <div id="arealogo" class="imglogo"><img src="./img/alurageek.png"></div>
+  <div id="areavinculos">
+    <div><a href="#" class="vinculofooter">Quiénes somos</a></div>
+    <div><a href="#" class="vinculofooter">Política de privacidad</a></div>
+    <div><a href="#" class="vinculofooter">Programa de fidelidad</a></div>
+    <div><a href="#" class="vinculofooter">Nuestras tiendas</a></div>
+    <div><a href="#" class="vinculofooter">Quiero ser franquiciado</a></div>
+    <div><a href="#" class="vinculofooter">Anuncie aquí</a></div>
+  </div>
+  <div id="areacontacto">
+    <form action="#" id="formcontacto">
+      <p>Hable con nosotros</p>
+      <input id="inputnombre" placeholder="Nombre"></input>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+      <button type="button" id="boton-mensaje" onclick="enviarMensaje();">Enviar mensaje</button>
+      <p id="errormensaje"></p>
+    </form>
+  </div>
+  <div id="realizado">
+    <p>Coded by Alex Collado Alias: K1rard - ©2022</p>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>E-commerce Alura Geek - Producto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top">
+    <div id="logotop" class="imglogo">
+      <a href="index.html"><img src="./img/alurageek.png"></a>
+    </div>
+    <div id="busqueda"> 
+      <form action="/" method="GET" class="form">
+      <input type="search" placeholder="¿Qué deseas buscar?" class="campo-buscar" />
+      <button type="submit" class="boton-buscar"> 
+        <img src="./iconos/lupa.png">
+      </button>
+     </form>
+    </div>
+    <div id="login">
+      <button type="button" id="boton-login" class="boton-blanco"><a href="login.html">Login</a></button>
+    </div>
+</div> 
+<div id="productoelegido">
+  <div id="imagenelegido"><img src="./img/star-wars1-grande.png"></div>
+  <div id="detalleselegido">
+    <div id="tituloelegido">Producto XYZ</div>
+    <div id="precioelegido">$ 60,00</div>
+    <div id="descripcionelegido">Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam</div>
+  </div>
+</div>
+<div class="categoria" id="bloquesimilares">
+  <div class="areatitulocategoria">
+    <div class="titulocategoria">Productos similares</div>
+  </div>
+  <div class="listaproductos">
+    <div class="itemproducto">
+      <div class="imagenproducto"><img src="./img/consolas1.png"></div>
+      <div class="tituloproducto">Producto XYZ</div>
+      <div class="precioproducto">$60,00</div>
+      <div class="linkproducto"><a href="producto.html">Ver producto</a></div>
+    </div>
+    <div class="itemproducto">
+      <div class="imagenproducto"><img src="./img/star-wars2.png"></div>
+      <div class="tituloproducto">Producto XYZ</div>
+      <div class="precioproducto">$60,00</div>
+      <div class="linkproducto">Ver producto</div>
+    </div>
+    <div class="itemproducto">
+      <div class="imagenproducto"><img src="./img/star-wars3.png"></div>
+      <div class="tituloproducto">Producto XYZ</div>
+      <div class="precioproducto">$60,00</div>
+      <div class="linkproducto">Ver producto</div>
+    </div>
+    <div class="itemproducto">
+      <div class="imagenproducto"><img src="./img/star-wars4.png"></div>
+      <div class="tituloproducto">Producto XYZ</div>
+      <div class="precioproducto">$60,00</div>
+      <div class="linkproducto">Ver producto</div>
+    </div>
+    <div class="itemproducto">
+      <div class="imagenproducto"><img src="./img/star-wars5.png"></div>
+      <div class="tituloproducto">Producto XYZ</div>
+      <div class="precioproducto">$60,00</div>
+      <div class="linkproducto">Ver producto</div>
+    </div>
+    <div class="itemproducto">
+      <div class="imagenproducto"><img src="./img/star-wars6.png"></div>
+      <div class="tituloproducto">Producto XYZ</div>
+      <div class="precioproducto">$60,00</div>
+      <div class="linkproducto">Ver producto</div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/alasql@0.4"></script> -->
+</body>
+<footer class="rodapie">
+  <div id="arealogo" class="imglogo"><img src="./img/alurageek.png"></div>
+  <div id="areavinculos">
+    <div><a href="#" class="vinculofooter">Quiénes somos</a></div>
+    <div><a href="#" class="vinculofooter">Política de privacidad</a></div>
+    <div><a href="#" class="vinculofooter">Programa de fidelidad</a></div>
+    <div><a href="#" class="vinculofooter">Nuestras tiendas</a></div>
+    <div><a href="#" class="vinculofooter">Quiero ser franquiciado</a></div>
+    <div><a href="#" class="vinculofooter">Anuncie aquí</a></div>
+  </div>
+  <div id="areacontacto">
+    <form action="#" id="formcontacto">
+      <p>Hable con nosotros</p>
+      <input id="inputnombre" placeholder="Nombre"></input>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+      <button type="button" id="boton-mensaje" onclick="enviarMensaje();">Enviar mensaje</button>
+      <p id="errormensaje"></p>
+    </form>
+  </div>
+  <div id="realizado">
+    <p>©2022 - Realizado por José Manuel Benetti</p>
+  </div>
+</footer>
+</html>
